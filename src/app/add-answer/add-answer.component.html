@@ -1,0 +1,41 @@
+
+
+<div class = "container">
+  Isn't it a very nice web application?
+<div *ngFor="let answer of answers; first as isFirst">
+  
+  <div *ngIf = "isFirst"> <!-- use of ngif in order to make the first radio button checked on initialization-->
+  <input
+  
+  checked
+  type="radio"
+  name = "answer"
+  value = "{{answer}}"
+  (change)="radioChangeHandler($event)"
+  > 
+  <i>{{answer}}</i>
+  </div>
+  
+
+
+  <div *ngIf= "isFirst==false"> <!-- second ngif that creates rest of them not checked-->
+
+      <input
+      
+      type="radio"
+      name = "answer"
+      value = "{{answer}}"
+      (change)="radioChangeHandler($event)"
+      
+      >
+      <i>{{answer}}</i>
+      
+
+  </div>
+</div>
+
+
+
+<button (click) = "addAnswerToDatabase()" cd routerLink = "/answer-submitted"
+class = "m-1 btn btn-light btn-outline-primary" >Submit answer</button>
+</div>
