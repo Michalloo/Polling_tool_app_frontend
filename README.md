@@ -14,7 +14,7 @@ Steps needed to start frontend of this application:
 
 
  Files responsible for backend of this application can be found here:
-
+  https://github.com/Michalloo/Polling_tool_app_backend/tree/master
 
  
  
