@@ -25,7 +25,6 @@ export class AddAnswerComponent implements OnInit {
 
 addAnswerToDatabase(){
   var val = {"answer":this.selectedAnswer}
-
   this.service.addAnswer(val).subscribe(res=>{
    alert(res.toString())
  })
